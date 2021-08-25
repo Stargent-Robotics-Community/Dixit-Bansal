@@ -1,0 +1,3 @@
+0 pikachu
+1 bulbasaur
+2 squirtle
