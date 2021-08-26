@@ -8,8 +8,7 @@ import speech_recognition as sr
 import os
 import time
 dex_root = Tk()
-dex_root.title("POKEDEX")
-dex_root.geometry("300x530")
+
 engine=pyttsx3.init('sapi5')
 voices=engine.getProperty("voices")
 engine.setProperty('voice',voices[1].id)
@@ -85,13 +84,14 @@ def start():
 
 print("Click on the pokéball to start!")
 speak("Click on the pokéball to start!")
-
+dex_root.title("POKEDEX")
+dex_root.geometry("350x550")
 bg=PhotoImage(file='images/pokedexp.png')
 lbl=Label(dex_root,image=bg)
 lbl.place(x=0,y=0,relwidth=1,relheight=1)
 strt_btn=PhotoImage(file='images/pokeball.png')
 img_label=Label(image=strt_btn)
-my_button=Button(dex_root,image=strt_btn,command=start,borderwidth=0)
+my_button=Button(dex_root,image=strt_btn,command=start,borderwidth=0,bg="white")
 my_button.pack(pady=230)
 my_label=Label(dex_root,text='')
 my_label.pack(pady=230)
